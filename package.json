@@ -1,7 +1,7 @@
 {
-  "name": "chromext",
+  "name": "cleanext",
   "version": "1.0.0",
-  "description": "",
+  "description": "web page cleaner",
   "main": "index.js",
   "scripts": {
     "start": "npx server -r . -o true"
