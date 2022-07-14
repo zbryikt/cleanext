@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "cleanext",
+  "description": "web page cleaner",
+  "version": "0.0.1",
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "run_at": "document_idle",
+      "js": ["assets/lib/@loadingio/debounce.js/main/index.min.js", "js/content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "64": "assets/icon/64.png"
+    },
+    "default_title": "template"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "identity"
+  ],
+  "icons": {
+    "64": "assets/icon/64.png"
+  }
+}

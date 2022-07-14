@@ -1,0 +1,25 @@
+{
+  "name": "chromext",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx server -r . -o true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@zbryikt/template": "^2.3.38",
+    "fedep": "^1.1.7"
+  },
+  "dependencies": {
+    "@loadingio/debounce.js": "^1.0.1"
+  },
+  "frontendDependencies": {
+    "root": "static/assets/lib",
+    "modules": [
+      "@loadingio/debounce.js"
+    ]
+  }
+}
