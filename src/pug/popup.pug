@@ -1,6 +1,21 @@
 doctype html
 html
   head
+    +css([
+      {name: "bootstrap", path: "dist/css/bootstrap.min.css"},
+      {name: "@loadingio/bootstrap.ext"}
+    ])
   body
-    h1 hi
-    script(src="/js/popup.min.js",type="text/javascript")
+    .p-2
+      div UI Cleaner
+      hr
+      .d-flex.flex-column
+        .btn.btn-sm.btn-primary.mb-2.text-nowrap(ld="clean") Clean Now
+        .btn.btn-sm.btn-primary.text-nowrap(ld="blacklist") Always Clean This Site
+    +script([
+      {name: "proxise"},
+      {name: "@loadingio/debounce.js"},
+      {name: "@loadingio/ldquery"},
+      {name: "ldview"},
+      {url: "/js/popup.min.js"}
+    ])

@@ -14,12 +14,24 @@
     "fedep": "^1.1.7"
   },
   "dependencies": {
-    "@loadingio/debounce.js": "^1.0.1"
+    "@loadingio/bootstrap.ext": "^0.0.9",
+    "@loadingio/debounce.js": "^1.0.1",
+    "@loadingio/ldquery": "^3.0.4",
+    "bootstrap": "^4.6.1",
+    "ldcover": "^3.2.1",
+    "ldview": "^1.2.1",
+    "proxise": "^1.0.1"
   },
   "frontendDependencies": {
     "root": "static/assets/lib",
     "modules": [
-      "@loadingio/debounce.js"
+      "@loadingio/debounce.js",
+      "bootstrap",
+      "@loadingio/bootstrap.ext",
+      "ldcover",
+      "ldview",
+      "@loadingio/ldquery",
+      "proxise"
     ]
   }
 }
