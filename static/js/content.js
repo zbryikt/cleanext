@@ -18,7 +18,9 @@ remover = function(sel){
 zremover = debounce(350, function(){
   return Array.from(document.querySelectorAll('*')).map(function(n){
     var style, zidx;
-    style = window.getComputedStyle(n);
+    if (!(style = window.getComputedStyle(n))) {
+      return;
+    }
     zidx = style.zIndex;
     if ((zidx && !isNaN(+zidx) && +zidx > 500) || style.position === 'fixed') {
       return n.parentNode.removeChild(n);

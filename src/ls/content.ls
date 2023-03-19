@@ -7,7 +7,7 @@ remover = (sel) ->
 
 zremover = debounce 350, ->
   Array.from(document.querySelectorAll \*).map (n) ->
-    style = window.getComputedStyle(n)
+    if !(style = window.getComputedStyle(n)) => return
     zidx = style.zIndex
     if (zidx and !isNaN(+zidx) and +zidx > 500) or
     style.position == \fixed => n.parentNode.removeChild(n)
